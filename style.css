@@ -1,0 +1,140 @@
+ .title {
+  color:#fa8e47;
+  font-size: 45px;
+  text-shadow: 0 0 5px 	#ffffcc; 
+  }
+body{
+  background-image: url("photo/shards.jpg");
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-attachment: fixed;
+}
+    .block-1 {
+  color:#fa8e47;
+  font-size: 15px;
+  text-shadow: 0 0 7px 	#ffffcc; 
+  }
+.block-2 {
+  color:#fa8e47;
+  font-size: 15px;
+  text-shadow: 0 0 7px 	#ffffcc; 
+  }
+.block-3 {
+  color:#fa8e47;
+  font-size: 15px;
+  text-shadow: 0 0 7px 	#ffffcc; 
+    width: 500px;
+  }
+ 
+.subtitle{
+    color:#fa8e47;
+  font-size: 35px;
+  text-shadow: 0 0 5px 	#ffffcc;
+}
+.minititle{
+    color:#fa8e47;
+  font-size: 25px;
+  text-shadow: 0 0 5px 	#ffffcc;
+}
+.photo-planets{
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 50px;
+    border-radius: 50%;
+}
+.nev-wrapper {
+margin: 0;
+width: 400px;
+height: 400px;
+padding: 10px;
+perspective: 1500px;
+    position: relative;
+    right: 20px;
+}
+.nev-menu {
+margin: 200px auto;
+position: relative;
+background: #4c1a1a;
+background: linear-gradient(to bottom, hsl(0, 90%, 50%) 0%, hsl(20, 90%, 40%) 40%);
+width: 300px;
+height: 350px;
+border-width: 20px 0;
+border-style: solid;
+border-color: #703512;
+color: #700202;
+transform-style: preserve-3d;
+box-shadow: 0 0 20px 0 #444;
+transform: translateY(-160px) rotateX(35deg) rotateZ(7deg);
+}
+.nev-menu:before {
+content: '';
+position: absolute;
+height: 30px;
+width: 300px;
+top: 370px;
+left: 0px;
+transform: rotateX(90deg) translateY(-15px) translateZ(15px);
+background: #fff;
+}
+.nev-menu:after {
+content: '';
+position: absolute;
+height: 350px;
+width: 30px;
+top: -20px;
+right: -30px;
+transform: rotateY(90deg) translateZ(-15px) translateX(15px);
+border-width: 20px 0;
+border-style: solid;
+border-color: #fff;
+background: #fff;
+}
+.nev-top {
+padding: 15px 0px 15px 20px;
+width: 100%;
+}
+.middle {
+position: relative;
+min-height: 40px;
+list-style: none;
+padding: 0;
+margin: 0;
+font-weight: bold;
+font-size: 10px;
+transform-style: preserve-3d;
+}
+.book {
+margin: 0;
+padding: 15px 0 15px 40px;
+outline: 0 none;
+position: relative;
+transform-style: preserve-3d;
+transform: translateZ(1px);
+z-index: 1;
+}
+.book:hover {
+box-shadow: inset 0 0 80px 0 rgba(255, 255, 255, 0.3);
+cursor: pointer;
+}
+.menu-back {
+position: absolute;
+background: transparent;
+top: -30px;
+left: 0;
+width: 300px;
+height: 360px;
+transform: translateZ(-29px);
+box-shadow: 70px 70px 50px -20px #481818;
+}
+.block-1{
+    width: 500px;
+}
+.block-4{
+    width: 500px;
+    color:#fa8e47;
+  font-size: 15px;
+}
+#planet-1{
+     margin-left: 550px;
+}
