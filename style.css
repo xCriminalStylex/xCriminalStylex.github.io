@@ -2,6 +2,7 @@
   color:#fa8e47;
   font-size: 45px;
   text-shadow: 0 0 5px 	#ffffcc; 
+  text-decoration: none;
   }
 body{
   background-image: url("photo/shards.jpg");
@@ -56,13 +57,13 @@ perspective: 1500px;
 margin: 200px auto;
 position: relative;
 background: #4c1a1a;
-background: linear-gradient(to bottom, hsl(0, 90%, 50%) 0%, hsl(20, 90%, 40%) 40%);
+background: linear-gradient(to bottom, hsl(0, 49%, 5%) 100%, hsl(19, 17%, 36%) 0%);
 width: 300px;
 height: 350px;
 border-width: 20px 0;
 border-style: solid;
 border-color: #703512;
-color: #700202;
+color: #ed490a;
 transform-style: preserve-3d;
 box-shadow: 0 0 20px 0 #444;
 transform: translateY(-160px) rotateX(35deg) rotateZ(7deg);
