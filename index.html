@@ -3,12 +3,110 @@
    <head>
        <meta charset="utf-8">
        <link rel="stylesheet" href="style.css">
-       <link rel="functionscript" href="function.js">
+       <script  src="function.js"> </script>
        <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Космос</title>
+       <script language="javascript">
+startdate = new Date();
+clockStart = startdate.getTime();
+function initStopwatch() {
+  var thisTime = new Date();
+  return (thisTime.getTime() - clockStart)/1000;
+}
+function getSecs() {
+  var tSecs = Math.round(initStopwatch());
+  var iSecs = tSecs % 60;
+  var iMins = Math.round((tSecs-30)/60);
+  var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+  var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+  document.getElementById("timer-counter").innerHTML = sMins+":"+sSecs;
+  setTimeout('getSecs()', 1000);
+}
+</script>
+    <script type="text/javascript">
+var mess=new Array(
+ "Author Oleksandr Zikran ",
+ "Copyright © 2022 ");
+
+var size = 20;
+var txtcol = "#fa8e47";
+var lastcol = "#ef0c0c";
+var pause = 1500;
+var speed = 70;
+var i = i_str = 0;
+var msg = msgpre = msgafter = "";
+
+function get_text() {
+ msgpre = mess[i].substring(0, i_str-1);
+ msgafter = mess[i].substring(i_str-1, i_str);
+ msg = "<span style='position: relative; color:" + txtcol + "; font-size: " +
+ size + "px;'>" + msgpre + "<span style='color:" + lastcol + ";'>" + msgafter +
+ "</span></span>";
+}
+
+function go() {
+if (i_str<=mess[i].length-1) {
+ i_str++;
+ get_text();
+ if (document.all) typewriter.innerHTML = msg;
+ else if (document.layers) {
+  document.typewriter.document.write(msg);
+  document.typewriter.document.close();
+ }
+ else document.getElementById("typewriter").innerHTML = msg;
+ var timer = setTimeout("go()", speed);
+}
+else {
+ clearTimeout(timer);
+ var timer = setTimeout("changemess()", pause);
+}
+}
+
+function changemess() {
+ i++;
+ i_str = 0;
+ if (i>mess.length-1) i = 0;
+ go();
+}
+</script>
+       <script type="text/javascript">
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+
+month=new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+"июля", "августа", "сентября", "октября", "ноября", "декабря");
+
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+
+date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
+" г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+ document.layers.doc_time.document.write(date_time);
+ document.layers.doc_time.document.close();
+}
+else document.getElementById("doc_time").innerHTML = date_time;
+ setTimeout("clock()", 1000);
+}
+</script>
     </head>
     <body>
+        
         <table>
+            <div class="timer"style='color:#fa8e47;'>
+            <body onload="getSecs()">
+                Вы здесь уже:
+                 <span id='timer-counter' style='color:#fa8e47;font-size:150%;font-weight:bold;'></span>
+                 минут/секунд.
+             </body>
+            </div>
             <h1 class="title">
                 <a href="https://xcriminalstylex.github.io">Солнечная Система</a></h1>
              <div class="text-body">
@@ -24,25 +122,33 @@
                    <div class="block-2">
                    <h2 class="subtitle">Планеты</h2>
                        <h3 class="minititle"><a href="https://xcriminalstylex.github.io/mercury.html">Меркурий</a></h3>
-                     <div class="planets">
-                       <img class="photo-planets" src="photo/mercury.png" alt="Меркурий">
+                     <div class="planets"><a href="https://xcriminalstylex.github.io/mercury.html">
+                         <img class="photo-planets" src="photo/mercury.png" alt="Меркурий"></a>
                     </div>
                  </div>
                </th>
                
                <th>   
                    <div class="block-3">
+                       
                    <span id="planet-1">      
                        <p>Меркурий — ближайшая к Солнцу планета Солнечной системы, наименьшая из планет земной группы. Названа в честь древнеримского бога торговли — быстрого Меркурия, поскольку она движется по небу быстрее других планет. Её период обращения вокруг Солнца составляет всего 87,97 земных суток — самый короткий среди всех планет Солнечной системы.Ось Меркурия имеет наименьший наклон из всех планет Солнечной системы (около 1/30 градуса).Поскольку атмосферы у Меркурия почти нет, температура его поверхности меняется сильнее, чем на любой другой планете Солнечной системы: от 100 К (−173 °C) ночью до 700 К (+427 °C) днём в экваториальных регионах. Полярные области постоянно охлаждены ниже 180 К (−93 °С).</p>
                        <p>После лишения Плутона в 2006 году статуса планеты к Меркурию перешло звание самой маленькой планеты Солнечной системы.</p></span> 
                </div>
              </th>
                <div class="block-4">
+                   <span id="doc_time">
+ Дата и время
+</span>
+                   <script type="text/javascript">
+ clock();
+</script>
                <th><h2 class="subtitle">Планеты-Карлики</h2></th>
                </div>
             </tr>
            <tr><td>
                <div class="block-5">
+                   <button type="submit" id="submit" onclick="alerted();">Нажми меня</button>
                      <div class="nev-wrapper">
                        <div class="nev-menu">
                          <div class="nev-top">
@@ -64,8 +170,14 @@
                </td>
                <td> </td><td> </td></tr>
            <tr><td> </td><td> </td><td> </td></tr>
-           <tr><td> </td><td> </td><td> </td></tr>
+                 <tr><td> </td><td>  </td> 
+               <td> <p id="typewriter"></p>
+               </td></tr>
                  </div>
-       </table>   
+            <script type="text/javascript">
+ go();
+</script>
+       </table>  
+        
     </body>
 </html>

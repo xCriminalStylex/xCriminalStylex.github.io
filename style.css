@@ -5,7 +5,8 @@
   text-decoration: none;
   }
 .title a {
-color:#fa8e47
+color:#fa8e47;
+cursor:pointer;
 }
 body{
   background-image: url("photo/shards.jpg");
@@ -33,11 +34,8 @@ body{
   color:#fa8e47;
   font-size: 15px;
   text-shadow: 0 0 7px 	#ffffcc; 
-    width: 400px;
-    
-    
+    width: 400px;  
   }
- 
 .subtitle{
     color:#fa8e47;
   font-size: 35px;
@@ -49,7 +47,8 @@ body{
   text-shadow: 0 0 5px 	#ffffcc;
 }
 .minititle a {
-color:#fa8e47
+color:#fa8e47;
+cursor:pointer;
 }
 .photo-planets{
     display: block;
@@ -90,7 +89,8 @@ box-shadow: 0 0 20px 0 #444;
 transform: translateY(-160px) rotateX(35deg) rotateZ(7deg);
 }
 .nev-menu a{
-   color: #ed490a; 
+color: #ed490a; 
+cursor:pointer;
 }
 .nev-menu:before {
 content: '';
@@ -162,4 +162,12 @@ box-shadow: 70px 70px 50px -20px #481818;
 }
 #planet-1{
      margin-left: 550px;
+}
+a {
+     color:#ff6600; font-weight:bold}
+a:hover {
+    color:#ff0000; font-weight:bold
+}
+#submit{
+    background-color: #fa8e47;
 }
